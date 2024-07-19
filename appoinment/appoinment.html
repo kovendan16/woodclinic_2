@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wood clinic||Mindwellness</title>
+    <title>Appointment Booking ||Wood clinic</title>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -56,8 +56,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
               <a class="nav-link" href="#profile">Profile</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="#video">Video</a>
             </li>
@@ -74,12 +79,12 @@
             <li class="nav-item">
               <a
                 class="nav-link"
-                href="./appoinment/appoinment.html"
+                href="https://g.co/kgs/AYyU3gC"
                 target="_blank"
                 >contact</a
               >
             </li>
-            <a href="./appoinment/appoinment.html">
+            <a href="#appointment">
               <button class="btn btn-primary book">Book Appointment</button>
             </a>
           </ul>
@@ -87,81 +92,23 @@
       </div>
     </nav>
 
-    <!-- Profile Section -->
-    <section id="profile" class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8">
-            <h2 class="mb-4">About Me</h2>
-            <p>Your introduction and details about yourself go here.</p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              convallis libero ac odio scelerisque, et tristique arcu semper.
-            </p>
-          </div>
-          <div class="col-lg-4">
-            <!-- Profile image -->
-            <img
-              src="./imgs/wood.jpg"
-              alt="Profile Image"
-              class="img-fluid img"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Video Section -->
-    <section id="video" class="bg-light py-5">
-      <div class="container">
-        <div class="row">
-          <!-- Video on the left -->
-          <div class="col-lg-6 text-center">
-            <h2 class="mb-4">Watch Our Video</h2>
-
-            <video
-              src="./viedo/MbgUQzhyT9V9Bqebv-Nrc-1000030997.mp4"
-              autoplay
-              muted
-            ></video>
-          </div>
-          <!-- Consultation details on the right -->
-          
-        
-          <div class="col-lg-6">
-            <!-- Contact details -->
-            <h4>Consultation details:</h4>
-            <p>Timings:  10am-6pm (MON-SAT)</p>
-            <p>Payment: 9 INR</p>
-            <p>Duration: 30 mins</p>
-            <p>payment mode: online</p>
-            
-            <a href="./appoinment/appoinment.html"><button  class="btn btn-primary">
-              Book Appointment
-            </button></a>
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Appointment Booking Section 
+    <!-- Appointment Booking Section -->
     <section id="appointment" class="py-5">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
             <h2 class="mb-4">Book an Appointment</h2>
             <form id="appointmentForm">
-              <div class="form-group">
-                <label for="name">Name:</label>
+              <!--  <div class="form-group">
+              <label for="name">Name:</label>
                 <input type="text" class="form-control" id="name" required />
               </div>
               <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" class="form-control" id="email" required />
-              </div>
+              </div>-->
               <div class="form-group">
-                <label for="mobile">Mobile Number:</label>
+                <label for="mobile">Whats app no:</label>
                 <input type="tel" class="form-control" id="mobile" required />
               </div>
               <div class="form-group">
@@ -176,24 +123,25 @@
                   <option value="12:00-13:00">12:00-13:00</option>
                 </select>
               </div>
-              <button type="submit" class="btn btn-primary">
-                Proceed
-              </button>
+              <button type="submit" class="btn btn-primary">Proceed</button>
             </form>
           </div>
           <div class="col-lg-6">
-             Contact details             <h4>Contact :</h4>
+            <!-- Contact details -->
+            <h4>Contact :</h4>
             <p>Email: contact@yourcompany.com</p>
             <p>Phone: +1234567890</p>
             <p>Address: 123 Street, City, Country</p>
           </div>
         </div>
-      </div>-->
-    
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
+    <footer
+      class="bg-dark text-white text-center py-3"
+      style="margin-top: 120px"
+    >
       <p>&copy; 2024 Your Company. All rights reserved.</p>
     </footer>
 
@@ -213,8 +161,8 @@
         .addEventListener("submit", function (event) {
           event.preventDefault();
 
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("email").value;
+          /*      const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;*/
           const mobile = document.getElementById("mobile").value;
           const date = document.getElementById("date").value;
           const slot = document.getElementById("slot").value;
@@ -235,8 +183,7 @@
             alert("Appointment booked successfully!");
 
             const bookingDetails = `Booking Details:
-      Name: ${name}
-      Email: ${email}
+    
       Mobile: ${mobile}
       Date: ${date}
       Slot: ${slot}`;
@@ -262,4 +209,4 @@
         });
     </script>
   </body>
-</html> 
+</html>
